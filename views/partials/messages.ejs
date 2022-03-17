@@ -1,0 +1,24 @@
+<!-- Messages -->
+<div class="container my-4">
+
+    <% if (locals.success_message.length > 0) { %>
+    <div class="alert alert-success alert-dismissible fade show mt-2 auto-hide message" role="alert" >
+        <strong>The current temperature of "<%- locals.success_message[0].location %>" is <%- locals.success_message[0].temperature %> degree celsius and it feels like <%- locals.success_message[0].feelslike %> degree celcius.</strong>
+        <button type="button" class="close" data-dismis="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <% } %>
+
+
+    <% if (locals.error_message.length > 0) { %>
+    <div class="alert alert-danger alert-dismissible fade show mt-2 auto-hide message" role="alert" >
+        <strong><%- locals.error_message %></strong>
+        <button type="button" class="close" data-dismis="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <% } %>
+
+</div>
+<!-- Messages end here -->
